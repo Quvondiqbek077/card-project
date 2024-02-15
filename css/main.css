@@ -7,6 +7,7 @@
     --white:#fff;
     --card-bg:rgba(21, 38, 63, 1);
     --outfit:"Outfit";
+    --line-dark:rgba(46, 64, 90, 1);
 }
 
 *, 
@@ -45,8 +46,7 @@ body{
 .card-image {
     border-radius: 8px;
 }
-.card-img {
-}
+
 .card-title {
     font-family: var(--outfit);
     font-size: 22px;
@@ -66,25 +66,60 @@ body{
 }
 .card-notice {
     display: flex;
-    /* justify-content: space-around; */
+    padding-right: 25px;
+    justify-content: space-between;
 }
 .comb {
+    color: var(--Cyan);
+    font-family: var(--outfit);
+
 }
-.combined {
+.ethereum-text{
+    font-family: var(--outfit);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--Cyan);
+    padding-left: 7px;
 }
-.notice-clock {
+.fad{
+    color: var(--soft-blue);
 }
-.fad {
+.clock-text{
+    font-family: var(--outfit);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--soft-blue);
+    padding-left: 7px;
 }
-.fa-clock {
-}
+
 .card-line {
+    width: 302px;
+    height: 1px;
+    background: var(--line-dark);
 }
 .card-tag {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 32px;
 }
 .tag-image {
+    width: 33px;
+    height: 33px;
+    border-radius: 33px;
+    
 }
 .tag-text {
+    font-family: var(--outfit);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--soft-blue);
+    padding-left: 16px;
 }
-.blue-txt {
+.tag-text-link {
+    font-family: var(--outfit);
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--white);
 }
