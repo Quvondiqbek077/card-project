@@ -1,34 +1,30 @@
 @import url(./font.css);
 
-:root{
-    --bg-dark-blue:rgba(13, 25, 44, 1);
-    --soft-blue:rgba(139, 172, 217, 1);
-    --Cyan:rgba(0, 255, 248, 1);
-    --white:#fff;
-    --card-bg:rgba(21, 38, 63, 1);
-    --outfit:"Outfit";
-    --line-dark:rgba(46, 64, 90, 1);
+:root {
+    --bg-dark-blue: rgba(13, 25, 44, 1);
+    --soft-blue: rgba(139, 172, 217, 1);
+    --Cyan: rgba(0, 255, 248, 1);
+    --white: #fff;
+    --card-bg: rgba(21, 38, 63, 1);
+    --outfit: "Outfit";
+    --line-dark: rgba(46, 64, 90, 1);
 }
 
-*, 
+*,
 *::after,
-*::before{
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
-    box-sizing: border-box;
-    height: 100%;
-    scrollbar-width: smooth;
-}
-body{
+
+body {
     background: var(--bg-dark-blue);
     display: flex;
     flex-direction: column;
+    height: 100vh;
     justify-content: center;
     align-items: center;
-    /* padding-top: 152px; */
 }
 
 .card {
@@ -38,22 +34,42 @@ body{
     padding-left: 24px;
     width: 350px;
 }
-.card-title-text-line{
+
+.card-title-text-line {
     display: flex;
     flex-direction: column;
     row-gap: 24px;
 }
-.card-image {
+
+.card-img, .card-image {
+    width: 302px;
+    height: 302px;
+    display: block;
     border-radius: 8px;
 }
+
+.card-img, .card-image:active{
+    opacity: 0.5;
+    background: url(../img/Eye.png) no-repeat center center;
+    background-color: var(--Cyan);
+    cursor: pointer;
+}
+
 
 .card-title {
     font-family: var(--outfit);
     font-size: 22px;
     font-weight: 600;
     color: var(--white);
-    padding-top: 24px;    
+    padding-top: 24px;
+    transition: .5s;
 }
+
+.card-title:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
 .card-text {
     font-family: var(--outfit);
     font-size: 18px;
@@ -64,27 +80,32 @@ body{
     width: 100%;
     padding-top: 16px;
 }
+
 .card-notice {
     display: flex;
     padding-right: 25px;
     justify-content: space-between;
 }
+
 .comb {
     color: var(--Cyan);
     font-family: var(--outfit);
 
 }
-.ethereum-text{
+
+.ethereum-text {
     font-family: var(--outfit);
     font-size: 16px;
     font-weight: 600;
     color: var(--Cyan);
     padding-left: 7px;
 }
-.fad{
+
+.fad {
     color: var(--soft-blue);
 }
-.clock-text{
+
+.clock-text {
     font-family: var(--outfit);
     font-size: 16px;
     font-weight: 400;
@@ -97,18 +118,21 @@ body{
     height: 1px;
     background: var(--line-dark);
 }
+
 .card-tag {
     display: flex;
     text-align: center;
     align-items: center;
     padding-bottom: 32px;
 }
+
 .tag-image {
     width: 33px;
     height: 33px;
     border-radius: 33px;
-    
+
 }
+
 .tag-text {
     font-family: var(--outfit);
     font-size: 16px;
@@ -116,10 +140,16 @@ body{
     color: var(--soft-blue);
     padding-left: 16px;
 }
+
 .tag-text-link {
     font-family: var(--outfit);
     font-size: 16px;
     font-weight: 400;
     text-decoration: none;
     color: var(--white);
+    transition: .5s;
+}
+
+.tag-text-link:active {
+    color: var(--Cyan);
 }
